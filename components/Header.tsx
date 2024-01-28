@@ -12,7 +12,7 @@ const Header = () => {
   const pathname = usePathname()
   useEffect(() => {
    const handleScroll = () => {
-      window.scrollY > 50 ? setHeader(true) : setHeader(false);
+      window.scrollY > 20 ? setHeader(true) : setHeader(false);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -25,12 +25,12 @@ const Header = () => {
   }, [])
   
   return (
-    <header className={` ${header ? 'py-4 bg-white shadow-lg dark:bg-accent ' : 'py-6 dark:bg-transparent'} sticky top-0 z-30 transition-all`}>
+    <header className={` ${header ? 'py-2 bg-white shadow-lg dark:bg-accent ' : 'py-2 dark:bg-transparent'} ${pathname ===  '/' && 'bg-green-50'} sticky top-0 z-30 transition-all` }>
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />
           <div className="flex items-center gap-x-6 ">
-          <Nav containerStyles="hidden xl:flex gap-x-8 items-center" linkStyle="relative hover:text-primary transition-all" underLineStyles="absolute left-0 top-full h-[2px] bg-primary w-full" />
+          <Nav containerStyles="hidden md:flex xl:flex gap-x-8 items-center" linkStyle="relative hover:text-primary transition-all" underLineStyles="absolute left-0 top-full h-[2px] bg-primary w-full" />
         <ThemeToggler />
         {/* Mobile nav  */}
         <div className=" xl: hidden">

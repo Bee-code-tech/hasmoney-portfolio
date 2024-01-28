@@ -4,7 +4,7 @@ import  Image  from "next/image";
 
 const Logo = () => {
   return <Link href='/'>
-  <Image src='/logo.svg' width={54} height={54} priority alt='user logo'/>
+  <Image src='/logo.png' width={30} height={30} priority alt='user logo'/>
   </Link>
 }
 
