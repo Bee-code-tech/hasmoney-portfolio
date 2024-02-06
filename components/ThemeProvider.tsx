@@ -9,6 +9,8 @@ interface MyThemeProviderProps {
   defaultTheme: string
 }
 
+
+// Themeprovider component hahaha 
 const MyThemeProvider: FC<MyThemeProviderProps> = ({ children, ...props }) => {
   return (
     <NextThemesProvider {...props}>
