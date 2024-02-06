@@ -11,6 +11,7 @@ interface NavProps {
 }
 
 
+// interface for NavLink component 
 interface NavLink {
   path: string;
   name: string;
@@ -22,6 +23,7 @@ const links: NavLink[] = [
   { path: '/contact', name: 'Contact Me' },
 ];
 
+// main component for the nav 
 const Nav : FC<NavProps> = ({containerStyles, linkStyle, underLineStyles}) => {
     const paths = usePathname()
   return (
